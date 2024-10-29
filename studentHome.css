@@ -1,0 +1,120 @@
+
+
+
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#nav {
+    list-style: none;
+    display: flex;
+    background-color: black;
+    margin: -26px;
+    padding: 3px;
+    align-items: center;
+    height: 69px;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 24px 18px;
+    padding: 13px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 2px;
+    font-style: normal;
+}
+
+#logo {
+    display: flex;
+    color: white;
+    align-items: center;
+    margin-right: 100px;  
+    margin-top: 16px;
+}
+
+#logoImg {
+    height: 56px;
+    width: 56px;
+    margin-left: 20px; 
+    margin-top: 16px;
+}
+
+#nav li:first-child a {
+    margin-left: 50px;
+}
+
+#container
+{
+    display: flex;
+    margin: 155px;
+    padding: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#modifyTT {
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+
+#modifyTT h1 {
+    color: #333;
+    margin-top: 107px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+#copyWrite
+{
+    display: flex;
+    border:solid black 2px ;
+    background-color: black;
+    color: white ;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width:100% ;
+    padding: 2px;
+    margin-top: 484px;
+
+}

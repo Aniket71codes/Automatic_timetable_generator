@@ -1,0 +1,221 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+
+
+#nav {
+    list-style: none;
+    display: flex;
+    background-color: black;
+    margin: -26px;
+    padding: 3px;
+    align-items: center;
+    height: 69px;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 24px 18px;
+    padding: 13px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 2px;
+    font-style: normal;
+}
+
+#logo {
+    display: flex;
+    color: white;
+    align-items: center;
+    margin-right: 100px;  
+    margin-top: 16px;
+}
+
+#logoImg {
+    height: 56px;
+    width: 56px;
+    margin-left: 20px; 
+    margin-top: 16px;
+}
+
+#nav li:first-child a {
+    margin-left: 50px;
+}
+
+#container
+{
+    display: flex;
+    margin: 155px;
+    padding: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#createTimetable
+{
+    display: flex;
+    flex-direction: column;
+    border: solid black 2px;
+    height: 422px;
+    width: 393px;
+    margin: 43px;
+    padding: 27px;
+}
+
+#createTimetable {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    height: 575px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#createTimetable h1 {
+    font-family: "Roboto Mono", monospace;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#createTimetable label {
+    font-size: 16px;
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Roboto Mono", monospace;
+}
+
+
+
+
+#classId {
+    width: 300px;                 /* Set the width of the input */
+    padding: 10px;                /* Add padding for better spacing */
+    margin: 15px 0;               /* Add margin above and below the input */
+    font-size: 16px;              /* Set font size */
+    border: 2px solid #ccc;       /* Set a light border color */
+    border-radius: 5px;           /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Slight shadow for depth */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Change border color and box shadow when the input is focused */
+#classId:focus {
+    border-color: #aacef5;        /* Blue border on focus */
+    outline: none;                /* Remove default outline */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Add shadow on focus */
+}
+
+/* Placeholder text styling */
+#classId::placeholder {
+    color: #aaa;                  /* Gray color for placeholder text */
+    font-style: italic;           /* Italic style for the placeholder */
+}
+#createTimetable select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    font-family: "Roboto Mono", monospace;
+    cursor: pointer;
+}
+
+#daySelect {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#daySelect li {
+    display: flex;
+    align-items: center;
+}
+
+#daySelect input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#createTimetable input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+
+#btn
+{
+    background-color: #1f2cda;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Roboto Condensed", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 10px;
+     font-style: normal;
+     margin: auto;
+
+     
+}
+
+
+
+
+
+
+
+
+
+
+#copyWrite
+{
+    display: flex;
+    border:solid black 2px ;
+    background-color: black;
+    color: white ;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width:100% ;
+    padding: 2px;
+    margin-top: 78px;
+
+}

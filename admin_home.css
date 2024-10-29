@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+#nav {
+    list-style: none;
+    display: flex;
+    background-color: black;
+    margin: -8px;
+    padding: 3px;
+    align-items: center;
+    height: 69px;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 24px 18px;
+    padding: 13px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 2px;
+    font-style: normal;
+}
+
+#logo {
+    display: flex;
+    color: white;
+    align-items: center;
+    margin-right: 100px;  
+    margin-top: 16px;
+}
+
+#logoImg {
+    height: 56px;
+    width: 56px;
+    margin-left: 20px; 
+    margin-top: 16px;
+}
+
+#nav li:first-child a {
+    margin-left: 50px;
+}
+
+#container
+{
+    display: flex;
+    margin: 155px;
+    padding: 26px;
+}
+
+
+
+
+
+
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+ .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+ section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+ h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+ .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #6d34d4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #8846e4;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#copyWrite
+{
+    display: flex;
+    border:solid black 2px ;
+    background-color: black;
+    color: white ;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width:100% ;
+    padding: 2px;
+    margin-top: 78px;
+
+}

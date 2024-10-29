@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyUPES</title>
+    <link rel="stylesheet" href="/landingPage.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="landingPageBG.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="signup-box">
+        <h2>Login</h2>
+        <form action="/" method="POST">
+            <div class="whoAreYou">
+                <label for="Mode">Who are you?</label>
+                <select id="Mode" name="role">
+                    <option value="Administrator">Administrator</option>
+                    <option value="Faculty">Faculty</option>
+                    <option value="Student">Student</option>
+                </select>
+            </div>
+            <div class="textbox">
+                <input type="number" placeholder="Sap Id" name="sapId" required>
+            </div>
+            <div class="textbox">
+                <input type="password" placeholder="Password" name="password" required>
+            </div>
+            <input type="submit" class="btn" value="Login">
+        </form>
+    </div>
+
+
+
+
+    <footer id="copyWrite">
+        Copyright © 2024 UPES | All Rights Reserved
+      </footer>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule</title>
+    <link rel="stylesheet" href="facultyClassSchedule.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navBar">
+        <ul id="nav">
+            <div class="logo">
+                <img id="logoImg" src="logo2.png" alt="UPES logo">
+            </div>
+            <div id="container">
+                <li><a href="/faculty">Home</a></li>
+                <li><a href="https://www.upes.ac.in/about-us">About</a></li>
+                <li><a href="https://outlook.office365.com/mail/">Notification</a></li>
+                <li><a href="https://myupes-beta.upes.ac.in/oneportal/app/auth/login">LMS</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <h1>Time Table</h1>
+    
+    <form id="filterForm">
+        <label for="batchNo">Batch:</label>
+        <input type="text" id="batchNo" name="batchNo" required>
+        <button type="submit">Filter</button>
+    </form>
+
+    <div id="data-container"></div>
+
+    <script>
+        async function fetchData(batch, teacher) {
+            try {
+                const response = await fetch(`http://localhost:3000/viewBatchTTs/${batch}`);
+                const data = await response.json();
+                console.log(data);
+
+                let table = `<table>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Batch</th>
+                                  <th>Classroom</th>
+                                  <th>Day</th>
+                                  <th>Start Time</th>
+                                  <th>End Time</th>
+                                  <th>Teacher</th>
+                                </tr>`;
+                
+                data.forEach(info => {
+                    table += `<tr>
+                                <td>${info.id}</td>
+                                <td>${info.batch}</td>
+                                <td>${info.classroom}</td>
+                                <td>${info.day}</td>
+                                <td>${info.startTime}</td>
+                                <td>${info.endTime}</td>
+                                <td>${info.teacher || 'N/A'}</td>
+                              </tr>`;
+                });
+                
+                table += `</table>`;
+                
+                document.getElementById('data-container').innerHTML = table;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                document.getElementById('data-container').innerHTML = 'Error fetching data!';
+            }
+        }
+
+        document.getElementById('filterForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const batch = document.getElementById('batchNo').value;
+            fetchData(batch);
+        });
+    </script>
+
+    <footer id="copyWrite">
+        Copyright © 2024 UPES | All Rights Reserved
+    </footer>
+</body>
+</html>
+
+
+
+<!-- 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule</title>
+    <link rel="stylesheet" href="facultyClassSchedule.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navBar">
+        <ul id="nav">
+            <div class="logo">
+                <img id="logoImg" src="logo2.png" alt="UPES logo">
+            </div>
+            <div id="container">
+                <li><a href="/faculty">Home</a></li>
+                <li><a href="https://www.upes.ac.in/about-us">About</a></li>
+                <li><a href="https://outlook.office365.com/mail/">Notification</a></li>
+                <li><a href="https://myupes-beta.upes.ac.in/oneportal/app/auth/login">LMS</a></li>
+            </div>
+        </ul>
+    </nav>
+
+
+    <form id="filterForm">
+        <label for="batchNo">Batch:</label>
+        <input type="text" id="batchNo" name="batchNo" required>
+        <button type="submit">Filter</button>
+    </form>
+    
+
+    <h1>Time Table</h1>
+    
+    
+    <div id="data-container"></div>
+
+    <script>
+        async function fetchData(batch, teacher) {
+            try {
+                const response = await fetch(`http://localhost:3000/viewBatchTTs/${batch}`);
+                const data = await response.json();
+                console.log(data);
+
+                let table = `<table>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Batch</th>
+                                  <th>Classroom</th>
+                                  <th>Day</th>
+                                  <th>Start Time</th>
+                                  <th>End Time</th>
+                                  <th>Teacher</th>
+                                </tr>`;
+                
+                data.forEach(info => {
+                    table += `<tr>
+                                <td>${info.id}</td>
+                                <td>${info.batch}</td>
+                                <td>${info.classroom}</td>
+                                <td>${info.day}</td>
+                                <td>${info.startTime}</td>
+                                <td>${info.endTime}</td>
+                                <td>${info.teacher || 'N/A'}</td>
+                              </tr>`;
+                });
+                
+                table += `</table>`;
+                
+                document.getElementById('data-container').innerHTML = table;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                document.getElementById('data-container').innerHTML = 'Error fetching data!';
+            }
+        }
+
+        document.getElementById('filterForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const batch = document.getElementById('batchNo').value;
+            const teacher = document.getElementById('teacher').value;
+            fetchData(batch, teacher);
+        });
+    </script>
+
+    <footer id="copyWrite">
+        Copyright © 2024 UPES | All Rights Reserved
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+ -->

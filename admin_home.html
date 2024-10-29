@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyUPES</title>
+    <link rel="stylesheet" href="admin_home.css">
+</head>
+<body>
+    <nav id = "navBar">
+
+        <ul id = "nav">
+            <div class="logo">
+                <img id = "logoImg" src="logo2.png" alt="UPES logo">
+            </div>
+            <div id = "container">
+            <li><a href="/adminHome">Home</a></li>
+            <li><a href="https://www.upes.ac.in/about-us">About</a></li>
+            <li><a href="https://outlook.office365.com/mail/">Notification</a></li>
+            </div>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+
+        <section id = "createTimeTable">
+
+            <h1 id= "headingCreateTT">Create Time Table</h1>
+            <form action="/createTimeTable"  method="post" id="form">
+
+                <button class="btn">Create Time Table</button>
+
+            </form>
+        </section>
+
+
+        <section id = "viewBatches">
+
+            <h1 id= "headingViewBatches">View Time Table</h1>
+            <form action="/facultyClassSchedule" method="get" id="form">
+
+                <button class="btn">View</button>
+
+            </form>
+        </section>
+
+
+
+        <section id = "modifyTT">
+            <h1 id= "headingmodifyTT">Modify Time Table</h1>
+            <form action="/modifyTimeTableAdmin" method="get" id="form">
+
+                <button class="btn">Modify</button>
+
+            </form>
+        </section>
+
+    </div>
+   
+
+
+
+
+
+    <footer id="copyWrite">
+        Copyright © 2024 UPES | All Rights Reserved
+      </footer>
+      
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule</title>
+    <link rel="stylesheet" href="facultyClassSchedule.css">
+</head>
+
+<style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+</style>
+
+<body>
+    <nav id="navBar">
+        <ul id="nav">
+            <div class="logo">
+                <img id="logoImg" src="logo2.png" alt="UPES logo">
+            </div>
+            <div id="container">
+                <li><a href="/faculty">Home</a></li>
+                <li><a href="https://www.upes.ac.in/about-us">About</a></li>
+                <li><a href="https://outlook.office365.com/mail/">Notification</a></li>
+                <li><a href="https://myupes-beta.upes.ac.in/oneportal/app/auth/login">LMS</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <h1>Time Table</h1>
+    <div id="data-container"></div>
+
+    <script>
+        async function fetchData() {
+            try {
+                const response = await fetch('http://localhost:3000/facultyClassSchedules');
+                const data = await response.json();
+                console.log(data);
+
+                let table = `<table>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Batch</th>
+                                  <th>Classroom</th>
+                                  <th>Day</th>
+                                  <th>Start Time</th>
+                                  <th>End Time</th>
+                                </tr>`;
+                
+                data.informations.forEach(info => {
+                    table += `<tr>
+                                <td>${info._id}</td>
+                                <td>${info.batch}</td>
+                                <td>${info.classroom}</td>
+                                <td>${info.day}</td>
+                                <td>${info.startTime}</td>
+                                <td>${info.endTime}</td>
+                              </tr>`;
+                });
+                
+                table += `</table>`;
+                
+                // Render the table inside the container
+                document.getElementById('data-container').innerHTML = table;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                document.getElementById('data-container').innerHTML = 'Error fetching data!';
+            }
+        }
+
+        // Fetch data when the page loads
+        window.onload = fetchData;
+    </script>
+
+    <footer id="copyWrite">
+        Copyright © 2024 UPES | All Rights Reserved
+    </footer>
+</body>
+</html>

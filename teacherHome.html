@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyUPES</title>
+    <link rel="stylesheet" href="teacherHome.css">
+</head>
+<body>
+    <nav id = "navBar">
+
+        <ul id = "nav">
+            <div class="logo">
+                <img id = "logoImg" src="logo2.png" alt="UPES logo">
+            </div>
+            <div id = "container">
+            <li><a href="/">Home</a></li>
+            <li><a href="https://www.upes.ac.in/about-us">About</a></li>
+            <li><a href="https://outlook.office365.com/mail/">Notification</a></li>
+            <li><a href="https://myupes-beta.upes.ac.in/oneportal/app/auth/login">LMS</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <section id = "teacherClassSchedule">
+
+            <h1>College Schedule</h1>
+            <form action="/facultyClassSchedule">
+                <button class="btn">Search</button>
+            </form>
+
+        </section>
+
+
+
+
+        <section id = "viewBatchTable">
+
+            <h1>View Batch Table</h1>
+            <form action="/viewBatchTTs" >
+                <button class="btn">View</button>
+            </form>
+
+        </section>
+
+
+
+
+
+        <section id = "modifyTT">
+
+            <h1>Modify Time Table</h1>
+            <form action="/modifyTimeTableFaculty">
+                <button class="btn">Modify</button>
+            </form>
+
+        </section>
+
+
+    </div>
+
+
+
+    <footer id="copyWrite">
+        Copyright © 2024 UPES | All Rights Reserved
+      </footer>
+
+
+
+</body>
+</html>

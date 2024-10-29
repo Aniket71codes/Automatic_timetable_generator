@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Time Table</title>
+    <link rel="stylesheet" href="modifyTTAdmin.css">
+</head>
+<body>
+    
+    <nav id = "navBar"></nav>
+
+        <ul id = "nav">
+            <div class="logo">
+                <img id = "logoImg" src="logo2.png" alt="UPES logo">
+            </div>
+            <div id = "container">
+            <li><a href="/adminHome">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/notification">Notification</a></li>
+            </div>
+        </ul>
+    </nav>
+
+
+    <section id = "createTimetable">
+
+        <div class = "createTT" >
+            <h1 id="Heading1" >Modify Time Table</h1>
+            <form action="/modifyTimeTableAdmin" method="post">
+
+              <input type="text" name="index" id = "classId" placeholder="Enter Class Id">
+               
+              <label for="classroom">Choose Room No</label>
+                <select id="ClassRoom">
+                    <option value="1001">1001</option>
+                    <option value="1002">1002</option>
+                    <option value="1003">1003</option>
+                    <option value="1004">1004</option>
+                    <option value="1005">1005</option>
+                    <option value="1006">1006</option>
+                    <option value="1007">1007</option>
+                    <option value="1008">1008</option>
+                    <option value="1009">1009</option>
+                    <option value="1101">1101</option>
+                    <option value="1102">1102</option>
+                    <option value="1103">1103</option>
+                    <option value="1104">1104</option>
+                </select>
+
+
+                <label for="teacher">Choose Teacher Name</label>
+                <select id="Teacher Name">
+                    <option value="Kamal Raj Singh">Kamal Raj Singh</option>
+                    <option value="Amar Jindal">Amar Jindal</option>
+                    <option value="Varun Sapra">Varun Sapra</option>
+                    <option value="Anand Kumar">Anand Kumar</option>
+                    <option value="Divya Rose">Divya Rose</option>
+                    <option value="Pankaj Rana">Pankaj Rana</option>
+                    <option value="Pratibha Joshi">Pratibha joshi</option>
+                    <option value="Mohammad Asif">Mohammad Asif</option>
+                </select>
+                
+                <label for="day">Day</label>
+                <ul id = "daySelect">
+                    <li>
+                      <label for="Monday">Monday</label>
+                      <input type="checkbox" id="Monday" name="Monday" value="Monday" />
+                    </li>
+
+                    <li>
+                        <label for="Tuesday">Tuesday</label>
+                        <input type="checkbox" id="Tuesday" name="Tuesday" value="Tuesday" />
+                      </li>
+
+                      <li>
+                        <label for="Wednesday">Wednesday</label>
+                        <input type="checkbox" id="Wednesday" name="Wednesday" value="Wednesday" />
+                      </li>
+
+                      <li>
+                        <label for="Thursday">Thursday</label>
+                        <input type="checkbox" id="Thursday" name="Thursday" value="Thursday" />
+                      </li>
+
+                      <li>
+                        <label for="Friday">Friday</label>
+                        <input type="checkbox" id="Friday" name="Friday" value="Friday" />
+                      </li>
+
+
+                      
+                    
+                    <!-- <label for="Time Durati">Time Duration</label>
+                    <select id="Time Duration">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    </section> -->
+
+                    <label for="startTime">Start Time</label>
+                    <input type="time" placeholder="Enter Start Time Slot">
+                    
+                    <label for="endTime">End Time</label>
+                    <input type="time" placeholder="Enter End Time Slot">
+
+
+                    <button type="submit" id = "btn">Submit</button>
+                
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <footer id="copyWrite">
+        Copyright © 2024 UPES | All Rights Reserved
+      </footer>
+
+</body>
+</html>

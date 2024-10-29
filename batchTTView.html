@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <link rel="stylesheet" href="./batchTTView.css">
+</head>
+
+<body>
+
+    <nav id="navBar">
+        <ul id="nav">
+            <div class="logo">
+                <img id="logoImg" src="logo2.png" alt="UPES logo">
+            </div>
+            <div id="container">
+                <li><a href="/adminHome">Home</a></li>
+                <li><a href="https://www.upes.ac.in/about-us">About</a></li>
+                <li><a href="https://outlook.office365.com/mail/">Notification</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 id="heading">Batch Time Table</h1>
+        <form id="batchForm" method="get">
+            <label for="batchNo">Batch No:</label>
+            <input type="text" placeholder="Enter Batch No" name="batchNo" id="batchNo" required>
+            <button type="submit" id="btn">View</button>
+        </form>
+    </div>
+
+    <footer id="copyWrite">
+        Copyright © 2024 UPES | All Rights Reserved
+    </footer>
+
+    <script>
+        document.getElementById('batchForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const batchNo = document.getElementById('batchNo').value;
+            if (batchNo) {
+                window.location.href = `/viewBatchTTs/${batchNo}`; 
+            } else {
+                alert('Please enter a valid batch number.');
+            }
+        });
+    </script>
+
+</body>
+</html>
